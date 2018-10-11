@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="screen" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  <!-- Jquery Slotmachine CSS -->
+  <link rel="stylesheet" href="css/jquery.slotmachine/jquery.slotmachine.css" type="text/css" media="screen" />
+
+  <title>Example Web Lucky Draw</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="slotmachine-box">
+      <div id="machine1" class="slotmachine-item-box">
+        <div><img src="img/number0.png" alt="number"></div>
+        <div><img src="img/number1.png" alt="number"></div>
+        <div><img src="img/number2.png" alt="number"></div>
+        <div><img src="img/number3.png" alt="number"></div>
+        <div><img src="img/number4.png" alt="number"></div>
+        <div><img src="img/number5.png" alt="number"></div>
+        <div><img src="img/number6.png" alt="number"></div>
+        <div><img src="img/number7.png" alt="number"></div>
+        <div><img src="img/number8.png" alt="number"></div>
+        <div><img src="img/number9.png" alt="number"></div>
+      </div>
+      <div id="machine2" class="slotmachine-item-box">
+        <div><img src="img/number0.png" alt="number"></div>
+        <div><img src="img/number1.png" alt="number"></div>
+        <div><img src="img/number2.png" alt="number"></div>
+        <div><img src="img/number3.png" alt="number"></div>
+        <div><img src="img/number4.png" alt="number"></div>
+        <div><img src="img/number5.png" alt="number"></div>
+        <div><img src="img/number6.png" alt="number"></div>
+        <div><img src="img/number7.png" alt="number"></div>
+        <div><img src="img/number8.png" alt="number"></div>
+        <div><img src="img/number9.png" alt="number"></div>
+      </div>
+      <div id="machine3" class="slotmachine-item-box">
+        <div><img src="img/number0.png" alt="number"></div>
+        <div><img src="img/number1.png" alt="number"></div>
+        <div><img src="img/number2.png" alt="number"></div>
+        <div><img src="img/number3.png" alt="number"></div>
+        <div><img src="img/number4.png" alt="number"></div>
+        <div><img src="img/number5.png" alt="number"></div>
+        <div><img src="img/number6.png" alt="number"></div>
+        <div><img src="img/number7.png" alt="number"></div>
+        <div><img src="img/number8.png" alt="number"></div>
+        <div><img src="img/number9.png" alt="number"></div>
+      </div>
+      <div id="machine4" class="slotmachine-item-box">
+        <div><img src="img/number0.png" alt="number"></div>
+        <div><img src="img/number1.png" alt="number"></div>
+        <div><img src="img/number2.png" alt="number"></div>
+        <div><img src="img/number3.png" alt="number"></div>
+        <div><img src="img/number4.png" alt="number"></div>
+        <div><img src="img/number5.png" alt="number"></div>
+        <div><img src="img/number6.png" alt="number"></div>
+        <div><img src="img/number7.png" alt="number"></div>
+        <div><img src="img/number8.png" alt="number"></div>
+        <div><img src="img/number9.png" alt="number"></div>
+      </div>
+      <div id="machine5" class="slotmachine-item-box">
+        <div><img src="img/number0.png" alt="number"></div>
+        <div><img src="img/number1.png" alt="number"></div>
+        <div><img src="img/number2.png" alt="number"></div>
+        <div><img src="img/number3.png" alt="number"></div>
+        <div><img src="img/number4.png" alt="number"></div>
+        <div><img src="img/number5.png" alt="number"></div>
+        <div><img src="img/number6.png" alt="number"></div>
+        <div><img src="img/number7.png" alt="number"></div>
+        <div><img src="img/number8.png" alt="number"></div>
+        <div><img src="img/number9.png" alt="number"></div>
+      </div>
+    </div>
+
+    <div class="slotmachine-box-button">
+        <button id="onClickRandom" type="button" class="btn btn-lg btn-primary">Click !</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 id="luckyNumber">Number</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Bootstrap -->
+  <script src="js/jquery/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Jquery Slotmachine -->
+  <script src="js/jquery.slotmachine/slotmachine.min.js"></script>
+  <script src="js/jquery.slotmachine/jquery.slotmachine.min.js"></script>
+
+  <script>
+
+    const myArrayNumber = [
+      "12345",
+      "54321",
+      "98765",
+      "11221",
+      "55555",
+      "77889",
+      "33445",
+      "66770",
+      "99881",
+      "88223"
+    ];
+
+    let number;
+
+    let number1 = 0;
+    let number2 = 0;
+    let number3 = 0;
+    let number4 = 0;
+    let number5 = 0;
+
+    function randomArrayNumber(arrayNumber) {
+      const number = arrayNumber[Math.floor(Math.random()*arrayNumber.length)];
+      return number;
+    }
+
+    function subStringNumber(stringNumber, start, end) {
+      const res = stringNumber.substring(start, end);
+      return res;
+    }
+
+    function setNumberSlotMachine(number) {
+      number1 = subStringNumber(number, 0, 1);
+      number2 = subStringNumber(number, 1, 2);
+      number3 = subStringNumber(number, 2, 3);
+      number4 = subStringNumber(number, 3, 4);
+      number5 = subStringNumber(number, 4, 5);
+    }
+
+    const btn = document.querySelector('#onClickRandom');
+
+    const el1 = document.querySelector('#machine1');
+    const el2 = document.querySelector('#machine2');
+    const el3 = document.querySelector('#machine3');
+    const el4 = document.querySelector('#machine4');
+    const el5 = document.querySelector('#machine5');
+
+    const machine1 = new SlotMachine(el1, {
+      active: 0,
+      randomize() {
+        return number1;
+      }
+    });
+    const machine2 = new SlotMachine(el2, {
+      active: 0,
+      randomize() {
+        return number2;
+      }
+    });
+    const machine3 = new SlotMachine(el3, {
+      active: 0,
+      randomize() {
+        return number3;
+      }
+    });
+    const machine4 = new SlotMachine(el4, {
+      active: 0,
+      randomize() {
+        return number4;
+      }
+    });
+    const machine5 = new SlotMachine(el5, {
+      active: 0,
+      delay: 300,
+      randomize() {
+        return number5;
+      }
+    });
+
+    function onComplete(active) {
+      let luckyNumber = document.querySelector('#luckyNumber');
+      luckyNumber.innerHTML = number;
+      $('#exampleModal').modal('show');
+    }
+
+    btn.addEventListener('click', () => {
+
+      number = randomArrayNumber(myArrayNumber);
+      setNumberSlotMachine(number);
+
+      machine1.shuffle(5);
+      setTimeout(() => machine2.shuffle(5), 500);
+      setTimeout(() => machine3.shuffle(5), 1000);
+      setTimeout(() => machine4.shuffle(5), 1500);
+      setTimeout(() => machine5.shuffle(5, onComplete), 2000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.slotmachine-box {
+  text-align: center;
+  margin-top: 30%;
+}
+
+.slotmachine-item-box {
+  display: inline-block;
+  background-color: white;
+  width: 126px;
+  height: 126px;
+  margin: 0 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slotmachine-box-button {
+  text-align: center;
+  margin-top: 80px;
+}
