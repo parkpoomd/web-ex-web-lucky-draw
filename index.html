@@ -88,6 +88,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <canvas id="canvas">Your browser does not support the 'canvas' element.</canvas>
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -119,6 +120,9 @@
   <!-- Jquery Slotmachine -->
   <script src="js/jquery.slotmachine/slotmachine.min.js"></script>
   <script src="js/jquery.slotmachine/jquery.slotmachine.min.js"></script>
+
+  <!-- Firework -->
+  <script src="js/firework.js"></script>
 
   <script>
 
@@ -205,6 +209,8 @@
       let luckyNumber = document.querySelector('#luckyNumber');
       luckyNumber.innerHTML = number;
       $('#exampleModal').modal('show');
+
+      launchAutomatedFirework();
     }
 
     btn.addEventListener('click', () => {

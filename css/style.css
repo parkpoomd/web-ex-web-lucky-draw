@@ -21,3 +21,15 @@ body {
   text-align: center;
   margin-top: 80px;
 }
+
+/* Firework Style */
+/* Fit the canvas to the page width and setting cursor */
+canvas {
+	cursor: crosshair;
+	display: block;
+}
+
+#canvas {
+  position: fixed;
+  z-index: -999 !important;
+}
