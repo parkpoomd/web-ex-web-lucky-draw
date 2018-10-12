@@ -175,31 +175,35 @@
 
     const machine1 = new SlotMachine(el1, {
       active: 0,
+      delay: 200,
       randomize() {
         return number1;
       }
     });
     const machine2 = new SlotMachine(el2, {
       active: 0,
+      delay: 250,
       randomize() {
         return number2;
       }
     });
     const machine3 = new SlotMachine(el3, {
       active: 0,
+      delay: 300,
       randomize() {
         return number3;
       }
     });
     const machine4 = new SlotMachine(el4, {
       active: 0,
+      delay: 350,
       randomize() {
         return number4;
       }
     });
     const machine5 = new SlotMachine(el5, {
       active: 0,
-      delay: 300,
+      delay: 500,
       randomize() {
         return number5;
       }
@@ -211,16 +215,30 @@
       $('#exampleModal').modal('show');
     }
 
+    // Start Slot Machine and set timer
+    // btn.addEventListener('click', () => {
+
+    //   number = randomArrayNumber(myArrayNumber);
+    //   setNumberSlotMachine(number);
+
+    //   machine1.shuffle(5);
+    //   setTimeout(() => machine2.shuffle(5), 500);
+    //   setTimeout(() => machine3.shuffle(5), 1000);
+    //   setTimeout(() => machine4.shuffle(5), 1500);
+    //   setTimeout(() => machine5.shuffle(5, onComplete), 2000);
+    // });
+
+    // Start Slot Machine
     btn.addEventListener('click', () => {
 
       number = randomArrayNumber(myArrayNumber);
       setNumberSlotMachine(number);
 
       machine1.shuffle(5);
-      setTimeout(() => machine2.shuffle(5), 500);
-      setTimeout(() => machine3.shuffle(5), 1000);
-      setTimeout(() => machine4.shuffle(5), 1500);
-      setTimeout(() => machine5.shuffle(5, onComplete), 2000);
+      machine2.shuffle(5);
+      machine3.shuffle(5);
+      machine4.shuffle(5);
+      machine5.shuffle(5, onComplete);
     });
   </script>
 
